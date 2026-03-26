@@ -554,6 +554,15 @@
 
 
         /* ==================== SERVICES SECTION ==================== */
+/* ==================== SERVICES BG - GOLDEN AURA ==================== */
+.services-section {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(198,168,125,0.25), transparent 35%),
+        radial-gradient(circle at 70% 80%, rgba(198,168,125,0.15), transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 60%),
+        linear-gradient(135deg, #0b0b0b, #141414, #0b0b0b);
+}
+
         .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
