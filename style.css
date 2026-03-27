@@ -443,7 +443,7 @@
         /* ==================== PREMIUM TRUST SECTION ==================== */
         #about {
     position: relative;
-    background: url('https://images.pexels.com/photos/19608779/pexels-photo-19608779.jpeg') center/cover no-repeat;
+    background: url('images/trustsection.jpeg') center/cover no-repeat;
     padding: 120px 0;
 }
 
@@ -685,7 +685,7 @@
         #portfolio {
     background: 
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url("https://images.pexels.com/photos/7587490/pexels-photo-7587490.jpeg");
+        url("images/portfoliosection.jpeg");
         
     background-size: cover;
     background-position: center;
@@ -1851,6 +1851,8 @@
 
         /* ==================== WHATSAPP FLOATING BUTTON ==================== */
         .whatsapp-float {
+            text-decoration: none;   /* underline remove */
+            color: inherit;
             position: fixed;
             bottom: 30px;
             left: 30px;
@@ -1861,6 +1863,8 @@
         }
         
         .whatsapp-float:hover {
+            text-decoration: none;
+            color: inherit;
             transform: scale(1.1);
         }
         
