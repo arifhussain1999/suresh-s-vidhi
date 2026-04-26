@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary SEO -->
+    <title>Contact Us | Vidhi Interiors - Book Your Consultation</title>
+    <meta name="description"
+        content="Get in touch with Vidhi Interiors. Visit our office in Bankura or call us to discuss your interior design project.">
+    
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-text">VIDHI</div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917699089182?text=Hello%20Vidhi%20Interiors%2C%20I'm%20interested%20in%20your%20luxury%20interior%20design%20services."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <div class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">VIDHI</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+                <button class="btn btn-gold" onclick="openConsultation()">Book Consultation</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenuBtn">✕</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button class="btn btn-gold" style="width: 100%; margin-top: 20px;" onclick="openConsultation()">Book Consultation</button>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 150px; background: #0a0303; text-align: center;">
+        <div class="container">
+            <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">GET IN TOUCH</span>
+            <h1 class="reveal" style="font-size: clamp(40px, 6vw, 64px); margin-top: 15px; color: white;">Let's Discuss Your Project</h1>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(400px,1fr)); gap:60px;">
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h3 style="font-size:28px; margin-bottom:30px;">Contact Information</h3>
+                    <div style="margin-bottom:30px;">
+                        <i class="fas fa-map-marker-alt" style="color:var(--gold); font-size:24px; margin-right:15px;"></i>
+                        <p style="display:inline-block;">Bankura, West Bengal, India</p>
+                    </div>
+                    <div style="margin-bottom:30px;">
+                        <i class="fas fa-phone" style="color:var(--gold); font-size:24px; margin-right:15px;"></i>
+                        <p style="display:inline-block;">+91 7699089182</p>
+                    </div>
+                    <div style="margin-bottom:30px;">
+                        <i class="fas fa-envelope" style="color:var(--gold); font-size:24px; margin-right:15px;"></i>
+                        <p style="display:inline-block;">vidhidoorandfurniture@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Web3 Form -->
+                <div class="reveal">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="2fb1477a-c40e-4d88-beb4-6fd00b5eb44e">
+                        <input type="hidden" name="subject" value="New VIDHI Website Inquiry">
+                        <input type="hidden" name="from_name" value="VIDHI Interior">
+
+                        <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:16px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px; font-size:16px;">
+                        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:16px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px; font-size:16px;">
+                        <input type="tel" name="phone" placeholder="Phone Number" required style="width:100%; padding:16px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px; font-size:16px;">
+                        
+                        <select name="service" style="width:100%; padding:16px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px; font-size:16px;">
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Modular Kitchen">Modular Kitchen</option>
+                            <option value="Renovation">Renovation</option>
+                        </select>
+
+                        <textarea name="message" placeholder="Tell us about your project" rows="5" required style="width:100%; padding:16px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px; font-size:16px;"></textarea>
+                        
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">VIDHI INTERIORS</div>
+                    <p style="color: #aaa; margin-top: 15px; line-height: 1.6;">Designing spaces that define lifestyle since 2013. Creating timeless elegance with premium materials.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; font-size: 18px;">Quick Links</h4>
+                    <div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="index.html" style="color: #aaa; text-decoration: none;">Home</a>
+                        <a href="about.html" style="color: #aaa; text-decoration: none;">About</a>
+                        <a href="services.html" style="color: #aaa; text-decoration: none;">Services</a>
+                        <a href="portfolio.html" style="color: #aaa; text-decoration: none;">Portfolio</a>
+                        <a href="blog.html" style="color: #aaa; text-decoration: none;">Blog</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; font-size: 18px;">Services</h4>
+                    <div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="services.html" style="color: #aaa; text-decoration: none;">Residential Design</a>
+                        <a href="services.html" style="color: #aaa; text-decoration: none;">Commercial Design</a>
+                        <a href="services.html" style="color: #aaa; text-decoration: none;">Modular Kitchen</a>
+                        <a href="services.html" style="color: #aaa; text-decoration: none;">Renovation</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; font-size: 18px;">Newsletter</h4>
+                    <p style="color: #aaa; margin-bottom: 20px;">Subscribe for design inspiration and exclusive offers</p>
+                    <form style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <input type="email" placeholder="Your email" style="flex: 1; padding: 14px; border-radius: 8px; border: none; min-width: 150px;">
+                        <button class="btn btn-gold" style="padding: 14px 24px;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>© 2026 Vidhi Interiors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Consultation Modal -->
+    <div id="consultationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); backdrop-filter:blur(10px); z-index:2000; justify-content:center; align-items:center;">
+        <div style="background:white; max-width:500px; width:90%; padding:50px; border-radius:28px; position:relative;">
+            <button onclick="closeConsultation()" style="position:absolute; top:20px; right:20px; background:none; border:none; font-size:28px; cursor:pointer;">✕</button>
+            <h2 style="margin-bottom:25px; font-size:28px;">Book Free Consultation</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="2fb1477a-c40e-4d88-beb4-6fd00b5eb44e">
+                <input type="text" name="name" placeholder="Full Name" required style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px;">
+                <input type="email" name="email" placeholder="Email" required style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px;">
+                <input type="tel" name="phone" placeholder="Phone" required style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px;">
+                <select name="service" style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:12px;">
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Renovation">Renovation</option>
+                </select>
+                <textarea name="message" placeholder="Project Details" rows="4" required style="width:100%; padding:14px; margin-bottom:20px; border:1px solid #ddd; border-radius:12px;"></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Schedule Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
