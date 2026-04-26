@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- Primary SEO -->
     <title>Vidhi Interiors | Luxury Interior Designers in Durgapur</title>
-    <meta name="description" content="Vidhi Interiors offers luxury interior design services in Durgapur. Modular kitchen, home renovation, office design & 3D interiors with premium quality.">
-    <meta name="keywords" content="interior designer Durgapur, modular kitchen, home interior, office design, Vidhi Interiors">
+    <meta name="description"
+        content="Vidhi Interiors offers luxury interior design services in Durgapur. Modular kitchen, home renovation, office design & 3D interiors with premium quality.">
+    <meta name="keywords"
+        content="interior designer Durgapur, modular kitchen, home interior, office design, Vidhi Interiors">
     <meta name="author" content="Vidhi Interiors">
 
     <!-- Canonical URL -->
@@ -18,7 +21,8 @@
 
     <!-- Open Graph (for social sharing) -->
     <meta property="og:title" content="Vidhi Interiors | Luxury Interior Designers">
-    <meta property="og:description" content="Premium interior design services in Durgapur with modern and luxury designs.">
+    <meta property="og:description"
+        content="Premium interior design services in Durgapur with modern and luxury designs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vidhinterio.in/">
     <meta property="og:image" content="https://vidhinterio.in/preview.jpg">
@@ -27,7 +31,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -41,228 +47,240 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-<!-- Loader -->
-<div class="loader" id="loader">
-    <div class="loader-text">VIDHI</div>
-</div>
-
-<!-- Progress Bar -->
-<div class="progress-bar" id="progressBar"></div>
-
-<!-- WhatsApp Floating Button - Animated, Left Bottom -->
-<a href="https://wa.me/917699089182?text=Hello%20Vidhi%20Interiors%2C%20I'm%20interested%20in%20your%20luxury%20interior%20design%20services.%20Please%20share%20more%20details." 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   aria-label="Chat on WhatsApp">
-    <div class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-text">VIDHI</div>
     </div>
-    <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
-</a>
 
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-    <div class="container">
-        <a href="#" class="logo">VIDHI</a>
-        <div class="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-            <button class="btn btn-gold" onclick="openConsultation()">Book Consultation</button>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- WhatsApp Floating Button - Animated, Left Bottom -->
+    <a href="https://wa.me/917699089182?text=Hello%20Vidhi%20Interiors%2C%20I'm%20interested%20in%20your%20luxury%20interior%20design%20services.%20Please%20share%20more%20details."
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <div class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">VIDHI</a>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <button class="btn btn-gold" onclick="openConsultation()">Book Consultation</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenuBtn">✕</button>
+        <a href="#home" onclick="closeMobileMenu()">Home</a>
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#services" onclick="closeMobileMenu()">Services</a>
+        <a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+        <button class="btn btn-gold" style="width: 100%; margin-top: 20px;" onclick="openConsultation()">Book
+            Consultation</button>
     </div>
-</nav>
+    <div class="menu-overlay" id="menuOverlay"></div>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <button class="close-menu" id="closeMenuBtn">✕</button>
-    <a href="#home" onclick="closeMobileMenu()">Home</a>
-    <a href="#about" onclick="closeMobileMenu()">About</a>
-    <a href="#services" onclick="closeMobileMenu()">Services</a>
-    <a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-    <button class="btn btn-gold" style="width: 100%; margin-top: 20px;" onclick="openConsultation()">Book Consultation</button>
-</div>
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Luxury Interior" class="hero-bg">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="hero-subtitle">EST. 2013</div>
-        <h1 class="hero-title">Designing Spaces That Define Lifestyle</h1>
-        <p class="hero-desc">Experience the pinnacle of luxury interior design with Vidhi Interiors. We craft elegant, timeless spaces that reflect your unique personality.</p>
-        <div class="hero-buttons">
-            <button class="btn btn-primary" onclick="scrollToSection('portfolio')">View Projects</button>
-            <button class="btn btn-outline" style="border-color: white; color: white;" onclick="openConsultation()">Book Consultation</button>
-        </div>
-    </div>
-</section>
-
-<!-- Trust Section -->
-<section id="about" class="section">
-    <div class="container">
-        <div class="trust-grid">
-
-            <div class="trust-card reveal">
-                <div class="trust-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-
-                <div class="number-wrapper">
-                    <span class="trust-number" data-count="12">0</span>
-                    
-                </div>
-
-                <div class="trust-label">Years Experience</div>
-            </div>
-
-
-            <div class="trust-card reveal">
-                <div class="trust-icon">
-                    <i class="fas fa-diagram-project"></i>
-                </div>
-
-                <div class="number-wrapper">
-                    <span class="trust-number" data-count="450">0</span>
-                    
-                </div>
-
-                <div class="trust-label">Projects Completed</div>
-            </div>
-
-
-            <div class="trust-card reveal">
-                <div class="trust-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-
-                <div class="number-wrapper">
-                    <span class="trust-number" data-count="800">0</span>
-                    
-                </div>
-
-                <div class="trust-label">Happy Clients</div>
-            </div>
-
-
-            <div class="trust-card reveal">
-                <div class="trust-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-
-                <div class="number-wrapper">
-                    <span class="trust-number" data-count="15">0</span>
-                    
-                </div>
-
-                <div class="trust-label">Awards Won</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="section services-section">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
-            <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">WHAT WE OFFER</span>
-            <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Our Premium Services</h2>
-            <p class="reveal" style="color: #666; max-width: 600px; margin: 20px auto;">Comprehensive interior solutions tailored to your unique needs</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card reveal">
-                <div class="service-image">
-                    <img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Residential">
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">🏠</div>
-                    <h3 class="service-title">Residential Design</h3>
-                    <p class="service-desc">Luxury homes that reflect your personality and lifestyle with timeless elegance.</p>
-                </div>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-image">
-                    <img src="images/minimalistapartment.png" alt="Commercial">
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">🏢</div>
-                    <h3 class="service-title">Commercial Design</h3>
-                    <p class="service-desc">Professional spaces that inspire productivity and leave lasting impressions.</p>
-                </div>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-image">
-                    <img src="images/modularkitchen.png" alt="Modular Kitchen">
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">🍳</div>
-                    <h3 class="service-title">Modular Kitchen</h3>
-                    <p class="service-desc">Custom-designed kitchens with premium materials and smart storage solutions.</p>
-                </div>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-image">
-                    <img src="images/officedesign.png" alt="Office">
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">💼</div>
-                    <h3 class="service-title">Office Design</h3>
-                    <p class="service-desc">Ergonomic and stylish workspaces that boost employee productivity.</p>
-                </div>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-image">
-                    <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Renovation">
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">🔨</div>
-                    <h3 class="service-title">Renovation</h3>
-                    <p class="service-desc">Transform your existing space with our expert renovation services.</p>
-                </div>
-            </div>
-            <div class="service-card reveal">
-                <div class="service-image">
-                    <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Turnkey">
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">🔑</div>
-                    <h3 class="service-title">Turnkey Projects</h3>
-                    <p class="service-desc">Complete end-to-end solutions from concept to handover.</p>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Luxury Interior" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-subtitle">EST. 2013</div>
+            <h1 class="hero-title">Designing Spaces That Define Lifestyle</h1>
+            <p class="hero-desc">Experience the pinnacle of luxury interior design with Vidhi Interiors. We craft
+                elegant, timeless spaces that reflect your unique personality.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('portfolio')">View Projects</button>
+                <button class="btn btn-outline" style="border-color: white; color: white;"
+                    onclick="openConsultation()">Book Consultation</button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="section">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
-            <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">OUR WORK</span>
-            <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Featured Projects</h2>
-            <p class="reveal" style="color: #666;">Explore our portfolio of luxury interior designs</p>
-        </div>
-        <div class="portfolio-filters reveal">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="luxury">Luxury</button>
-            <button class="filter-btn" data-filter="modern">Modern</button>
-            <button class="filter-btn" data-filter="minimal">Minimal</button>
-        </div>
-        <div class="portfolio-grid" id="portfolioGrid"></div>
-    </div>
-</section>
+    <!-- Trust Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="trust-grid">
 
-<!-- Enhanced UI Section with 3D Effects -->
- <!-- ================================================= -->
+                <div class="trust-card reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+
+                    <div class="number-wrapper">
+                        <span class="trust-number" data-count="12">0</span>
+
+                    </div>
+
+                    <div class="trust-label">Years Experience</div>
+                </div>
+
+
+                <div class="trust-card reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-diagram-project"></i>
+                    </div>
+
+                    <div class="number-wrapper">
+                        <span class="trust-number" data-count="450">0</span>
+
+                    </div>
+
+                    <div class="trust-label">Projects Completed</div>
+                </div>
+
+
+                <div class="trust-card reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <div class="number-wrapper">
+                        <span class="trust-number" data-count="800">0</span>
+
+                    </div>
+
+                    <div class="trust-label">Happy Clients</div>
+                </div>
+
+
+                <div class="trust-card reveal">
+                    <div class="trust-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+
+                    <div class="number-wrapper">
+                        <span class="trust-number" data-count="15">0</span>
+
+                    </div>
+
+                    <div class="trust-label">Awards Won</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">WHAT WE
+                    OFFER</span>
+                <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Our Premium Services
+                </h2>
+                <p class="reveal" style="color: #666; max-width: 600px; margin: 20px auto;">Comprehensive interior
+                    solutions tailored to your unique needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Residential">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🏠</div>
+                        <h3 class="service-title">Residential Design</h3>
+                        <p class="service-desc">Luxury homes that reflect your personality and lifestyle with timeless
+                            elegance.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="images/minimalistapartment.png" alt="Commercial">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🏢</div>
+                        <h3 class="service-title">Commercial Design</h3>
+                        <p class="service-desc">Professional spaces that inspire productivity and leave lasting
+                            impressions.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="images/modularkitchen.png" alt="Modular Kitchen">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🍳</div>
+                        <h3 class="service-title">Modular Kitchen</h3>
+                        <p class="service-desc">Custom-designed kitchens with premium materials and smart storage
+                            solutions.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="images/officedesign.png" alt="Office">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">💼</div>
+                        <h3 class="service-title">Office Design</h3>
+                        <p class="service-desc">Ergonomic and stylish workspaces that boost employee productivity.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Renovation">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🔨</div>
+                        <h3 class="service-title">Renovation</h3>
+                        <p class="service-desc">Transform your existing space with our expert renovation services.</p>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Turnkey">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">🔑</div>
+                        <h3 class="service-title">Turnkey Projects</h3>
+                        <p class="service-desc">Complete end-to-end solutions from concept to handover.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">OUR
+                    WORK</span>
+                <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Featured Projects</h2>
+                <p class="reveal" style="color: #666;">Explore our portfolio of luxury interior designs</p>
+            </div>
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+                <button class="filter-btn" data-filter="modern">Modern</button>
+                <button class="filter-btn" data-filter="minimal">Minimal</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid"></div>
+        </div>
+    </section>
+
+    <!-- Enhanced UI Section with 3D Effects -->
+    <!-- ================================================= -->
     <!-- ULTRA PREMIUM SECTION: Experience Excellence in Design -->
     <!-- FULLY RESPONSIVE - MOBILE | TABLET | DESKTOP       -->
     <!-- REPLACE ONLY THIS SECTION IN YOUR EXISTING PAGE    -->
@@ -278,7 +296,8 @@
                 </div>
                 <h2 class="ultra-title">Experience Excellence in Design</h2>
                 <p class="ultra-desc">
-                    Where visionary aesthetics meet unparalleled artistry — each space curated as a timeless masterpiece.
+                    Where visionary aesthetics meet unparalleled artistry — each space curated as a timeless
+                    masterpiece.
                 </p>
             </div>
 
@@ -292,7 +311,8 @@
                     </div>
                     <h3 class="royal-card-title">Artisanal Mastery</h3>
                     <p class="royal-card-desc">
-                        Rare Italian marbles, hand-veined onyx, and bespoke metal inlays. Only the world’s finest materials grace your sanctuary.
+                        Rare Italian marbles, hand-veined onyx, and bespoke metal inlays. Only the world’s finest
+                        materials grace your sanctuary.
                     </p>
                     <div class="gold-spark">✦</div>
                 </div>
@@ -305,7 +325,8 @@
                     </div>
                     <h3 class="royal-card-title">Bespoke Couture</h3>
                     <p class="royal-card-desc">
-                        Tailor-made narratives sculpted to your soul. Every curve, texture, and finish is an exclusive signature of your identity.
+                        Tailor-made narratives sculpted to your soul. Every curve, texture, and finish is an exclusive
+                        signature of your identity.
                     </p>
                     <div class="gold-spark">✦</div>
                 </div>
@@ -318,7 +339,8 @@
                     </div>
                     <h3 class="royal-card-title">Timeless Precision</h3>
                     <p class="royal-card-desc">
-                        Orchestrated project excellence with zero compromise on deadlines. Luxury delivered with Swiss-watch reliability.
+                        Orchestrated project excellence with zero compromise on deadlines. Luxury delivered with
+                        Swiss-watch reliability.
                     </p>
                     <div class="gold-spark">✦</div>
                 </div>
@@ -331,7 +353,8 @@
                     </div>
                     <h3 class="royal-card-title">Visionary Artisans</h3>
                     <p class="royal-card-desc">
-                        Award-winning designers and master craftsmen blending heritage techniques with futuristic innovation.
+                        Award-winning designers and master craftsmen blending heritage techniques with futuristic
+                        innovation.
                     </p>
                     <div class="gold-spark">✦</div>
                 </div>
@@ -339,178 +362,256 @@
         </div>
     </section>
 
-<!-- Process Section -->
-<section style="background: #0a0303;" class="section">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
-            <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">HOW WE WORK</span>
-            <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Our Design Process</h2>
-            <p class="reveal" style="color: #666;">A seamless journey from concept to completion</p>
-        </div>
-        <div class="process-timeline">
-            <div class="process-step reveal"><div class="process-content"><div class="process-number">01</div><h3 style="font-size: 28px; margin: 15px 0;">Consultation</h3><p>Understanding your vision, requirements, and lifestyle needs through in-depth discussions.</p></div></div>
-            <div class="process-step reveal"><div class="process-content"><div class="process-number">02</div><h3 style="font-size: 28px; margin: 15px 0;">Planning & Design</h3><p>Creating detailed layouts, 3D visualizations, and material selections tailored to your taste.</p></div></div>
-            <div class="process-step reveal"><div class="process-content"><div class="process-number">03</div><h3 style="font-size: 28px; margin: 15px 0;">Execution</h3><p>Expert craftsmanship with regular quality checks and strict timeline management.</p></div></div>
-            <div class="process-step reveal"><div class="process-content"><div class="process-number">04</div><h3 style="font-size: 28px; margin: 15px 0;">Handover</h3><p>Final walkthrough, quality assurance, and celebration of your beautiful new space.</p></div></div>
-        </div>
-    </div>
-</section>
-
-<!-- Materials Showcase -->
-<section class="section materials-showcase">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
-            <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">PREMIUM MATERIALS</span>
-            <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Finest Selection</h2>
-            <p class="reveal" style="color: rgba(255,255,255,0.7);">We use only the finest materials for timeless elegance</p>
-        </div>
-        <div class="materials-grid">
-            <div class="material-item reveal glow-effect"><div class="material-icon">💎</div><h3 style="margin-bottom: 10px;">Italian Marble</h3><p style="color: rgba(255,255,255,0.6);">Luxurious natural stone with unique veining patterns</p></div>
-            <div class="material-item reveal glow-effect"><div class="material-icon">🌳</div><h3 style="margin-bottom: 10px;">Premium Wood</h3><p style="color: rgba(255,255,255,0.6);">Solid teak, oak, and engineered wood options</p></div>
-            <div class="material-item reveal glow-effect"><div class="material-icon">🔮</div><h3 style="margin-bottom: 10px;">Crystal Glass</h3><p style="color: rgba(255,255,255,0.6);">High-quality glass and mirror finishes</p></div>
-            <div class="material-item reveal glow-effect"><div class="material-icon">💡</div><h3 style="margin-bottom: 10px;">Designer Lighting</h3><p style="color: rgba(255,255,255,0.6);">Ambient, accent, and statement lighting solutions</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="section testimonials-section">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 70px;">
-            <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">TESTIMONIALS</span>
-            <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">What Our Clients Say</h2>
-            <p class="reveal">Trusted by 800+ happy clients across India</p>
-        </div>
-        <div class="testimonials-slider swiper" id="testimonialsSlider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="testimonial-card"><i class="fas fa-quote-left" style="font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 20px; display: block;"></i><p class="testimonial-text">"Vidhi Interiors transformed our home into a masterpiece. The attention to detail and quality of materials exceeded our expectations. Highly recommended!"</p><div class="testimonial-author"><img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client"><div><h4 style="font-size: 18px;">Priya Sharma</h4><p style="color: var(--gold);">Homeowner, Mumbai</p></div></div></div></div>
-                <div class="swiper-slide"><div class="testimonial-card"><i class="fas fa-quote-left" style="font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 20px; display: block;"></i><p class="testimonial-text">"Professional, creative, and reliable. The team understood our vision perfectly and delivered beyond our expectations. Our office space is now inspiring!"</p><div class="testimonial-author"><img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client"><div><h4 style="font-size: 18px;">Rajesh Gupta</h4><p style="color: var(--gold);">Business Owner, Delhi</p></div></div></div></div>
-                <div class="swiper-slide"><div class="testimonial-card"><i class="fas fa-quote-left" style="font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 20px; display: block;"></i><p class="testimonial-text">"The modular kitchen they designed is both beautiful and functional. Every detail was carefully planned. Best interior designers in town!"</p><div class="testimonial-author"><img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Client"><div><h4 style="font-size: 18px;">Anjali Mehta</h4><p style="color: var(--gold);">Homeowner, Kolkata</p></div></div></div></div>
+    <!-- Process Section -->
+    <section style="background: #0a0303;" class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">HOW WE
+                    WORK</span>
+                <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Our Design Process</h2>
+                <p class="reveal" style="color: #666;">A seamless journey from concept to completion</p>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="process-timeline">
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-number">01</div>
+                        <h3 style="font-size: 28px; margin: 15px 0;">Consultation</h3>
+                        <p>Understanding your vision, requirements, and lifestyle needs through in-depth discussions.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-number">02</div>
+                        <h3 style="font-size: 28px; margin: 15px 0;">Planning & Design</h3>
+                        <p>Creating detailed layouts, 3D visualizations, and material selections tailored to your taste.
+                        </p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-number">03</div>
+                        <h3 style="font-size: 28px; margin: 15px 0;">Execution</h3>
+                        <p>Expert craftsmanship with regular quality checks and strict timeline management.</p>
+                    </div>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-content">
+                        <div class="process-number">04</div>
+                        <h3 style="font-size: 28px; margin: 15px 0;">Handover</h3>
+                        <p>Final walkthrough, quality assurance, and celebration of your beautiful new space.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- CTA Section -->
-<section class="section-sm">
-    <div class="container">
-        <div class="cta-section reveal">
-            <h2 style="font-size: clamp(32px, 5vw, 48px); margin-bottom: 20px;">Start Your Dream Interior Today</h2>
-            <p style="margin-bottom: 35px; font-size: 18px;">Book your free consultation and let's create something beautiful together</p>
-            <button class="btn btn-gold" style="font-size: 18px; padding: 16px 40px;" onclick="openConsultation()">Book Free Consultation →</button>
+    <!-- Materials Showcase -->
+    <section class="section materials-showcase">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <span class="hero-subtitle" style="color: var(--gold); position: static; display: inline-block;">PREMIUM
+                    MATERIALS</span>
+                <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">Finest Selection</h2>
+                <p class="reveal" style="color: rgba(255,255,255,0.7);">We use only the finest materials for timeless
+                    elegance</p>
+            </div>
+            <div class="materials-grid">
+                <div class="material-item reveal glow-effect">
+                    <div class="material-icon">💎</div>
+                    <h3 style="margin-bottom: 10px;">Italian Marble</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Luxurious natural stone with unique veining patterns</p>
+                </div>
+                <div class="material-item reveal glow-effect">
+                    <div class="material-icon">🌳</div>
+                    <h3 style="margin-bottom: 10px;">Premium Wood</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Solid teak, oak, and engineered wood options</p>
+                </div>
+                <div class="material-item reveal glow-effect">
+                    <div class="material-icon">🔮</div>
+                    <h3 style="margin-bottom: 10px;">Crystal Glass</h3>
+                    <p style="color: rgba(255,255,255,0.6);">High-quality glass and mirror finishes</p>
+                </div>
+                <div class="material-item reveal glow-effect">
+                    <div class="material-icon">💡</div>
+                    <h3 style="margin-bottom: 10px;">Designer Lighting</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Ambient, accent, and statement lighting solutions</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section contact-section">
-    <div class="container">
-
-        <div style="text-align:center; margin-bottom:70px;">
-            <span class="hero-subtitle" 
-            style="color:var(--gold); position:static; display:inline-block;">
-            GET IN TOUCH
-            </span>
-
-            <h2 class="reveal"
-            style="font-size:clamp(36px,5vw,52px); margin-top:15px;">
-            Let's Discuss Your Project
-            </h2>
-
-            <p class="reveal">
-            We're here to answer your questions and bring your vision to life
-            </p>
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 70px;">
+                <span class="hero-subtitle"
+                    style="color: var(--gold); position: static; display: inline-block;">TESTIMONIALS</span>
+                <h2 class="reveal" style="font-size: clamp(36px, 5vw, 52px); margin-top: 15px;">What Our Clients Say
+                </h2>
+                <p class="reveal">Trusted by 800+ happy clients across India</p>
+            </div>
+            <div class="testimonials-slider swiper" id="testimonialsSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card"><i class="fas fa-quote-left"
+                                style="font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 20px; display: block;"></i>
+                            <p class="testimonial-text">"Vidhi Interiors transformed our home into a masterpiece. The
+                                attention to detail and quality of materials exceeded our expectations. Highly
+                                recommended!"</p>
+                            <div class="testimonial-author"><img src="https://randomuser.me/api/portraits/women/1.jpg"
+                                    alt="Client">
+                                <div>
+                                    <h4 style="font-size: 18px;">Priya Sharma</h4>
+                                    <p style="color: var(--gold);">Homeowner, Mumbai</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card"><i class="fas fa-quote-left"
+                                style="font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 20px; display: block;"></i>
+                            <p class="testimonial-text">"Professional, creative, and reliable. The team understood our
+                                vision perfectly and delivered beyond our expectations. Our office space is now
+                                inspiring!"</p>
+                            <div class="testimonial-author"><img src="https://randomuser.me/api/portraits/men/2.jpg"
+                                    alt="Client">
+                                <div>
+                                    <h4 style="font-size: 18px;">Rajesh Gupta</h4>
+                                    <p style="color: var(--gold);">Business Owner, Delhi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card"><i class="fas fa-quote-left"
+                                style="font-size: 48px; color: var(--gold); opacity: 0.3; margin-bottom: 20px; display: block;"></i>
+                            <p class="testimonial-text">"The modular kitchen they designed is both beautiful and
+                                functional. Every detail was carefully planned. Best interior designers in town!"</p>
+                            <div class="testimonial-author"><img src="https://randomuser.me/api/portraits/women/3.jpg"
+                                    alt="Client">
+                                <div>
+                                    <h4 style="font-size: 18px;">Anjali Mehta</h4>
+                                    <p style="color: var(--gold);">Homeowner, Kolkata</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="cta-section reveal">
+                <h2 style="font-size: clamp(32px, 5vw, 48px); margin-bottom: 20px;">Start Your Dream Interior Today</h2>
+                <p style="margin-bottom: 35px; font-size: 18px;">Book your free consultation and let's create something
+                    beautiful together</p>
+                <button class="btn btn-gold" style="font-size: 18px; padding: 16px 40px;"
+                    onclick="openConsultation()">Book Free Consultation →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+
+            <div style="text-align:center; margin-bottom:70px;">
+                <span class="hero-subtitle" style="color:var(--gold); position:static; display:inline-block;">
+                    GET IN TOUCH
+                </span>
+
+                <h2 class="reveal" style="font-size:clamp(36px,5vw,52px); margin-top:15px;">
+                    Let's Discuss Your Project
+                </h2>
+
+                <p class="reveal">
+                    We're here to answer your questions and bring your vision to life
+                </p>
+            </div>
 
 
-        <div style="display:grid;
+            <div style="display:grid;
         grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
         gap:60px;">
 
 
-            <!-- Contact Info -->
-            <div class="reveal">
+                <!-- Contact Info -->
+                <div class="reveal">
 
-                <h3 style="font-size:28px; margin-bottom:30px;">
-                Contact Information
-                </h3>
+                    <h3 style="font-size:28px; margin-bottom:30px;">
+                        Contact Information
+                    </h3>
 
-                <div style="margin-bottom:30px;">
-                <i class="fas fa-map-marker-alt"
-                style="color:var(--gold);
+                    <div style="margin-bottom:30px;">
+                        <i class="fas fa-map-marker-alt" style="color:var(--gold);
                 font-size:24px;
                 margin-right:15px;"></i>
 
-                <p style="display:inline-block;">
-                Bankura, West Bengal, India
-                </p>
-                </div>
+                        <p style="display:inline-block;">
+                            Bankura, West Bengal, India
+                        </p>
+                    </div>
 
 
-                <div style="margin-bottom:30px;">
-                <i class="fas fa-phone"
-                style="color:var(--gold);
+                    <div style="margin-bottom:30px;">
+                        <i class="fas fa-phone" style="color:var(--gold);
                 font-size:24px;
                 margin-right:15px;"></i>
 
-                <p style="display:inline-block;">
-                +91 7699089182
-                </p>
-                </div>
+                        <p style="display:inline-block;">
+                            +91 7699089182
+                        </p>
+                    </div>
 
 
-                <div style="margin-bottom:30px;">
-                <i class="fas fa-envelope"
-                style="color:var(--gold);
+                    <div style="margin-bottom:30px;">
+                        <i class="fas fa-envelope" style="color:var(--gold);
                 font-size:24px;
                 margin-right:15px;"></i>
 
-                <p style="display:inline-block;">
-                vidhidoorandfurniture@gmail.com
-                </p>
+                        <p style="display:inline-block;">
+                            vidhidoorandfurniture@gmail.com
+                        </p>
+                    </div>
+
+
+                    <div class="social-links">
+
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                    </div>
+
                 </div>
 
 
-                <div class="social-links">
 
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <!-- Web3 Form -->
+                <div class="reveal">
 
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <form action="https://api.web3forms.com/submit" method="POST">
 
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
-                </div>
-
-            </div>
+                        <input type="hidden" name="access_key" value="2fb1477a-c40e-4d88-beb4-6fd00b5eb44e">
 
 
+                        <!-- Optional -->
+                        <input type="hidden" name="subject" value="New VIDHI Website Inquiry">
 
-            <!-- Web3 Form -->
-            <div class="reveal">
-
-<form action="https://api.web3forms.com/submit" method="POST">
-
-<input type="hidden" 
-name="access_key"
-value="2fb1477a-c40e-4d88-beb4-6fd00b5eb44e">
-
-
-<!-- Optional -->
-<input type="hidden" name="subject" value="New VIDHI Website Inquiry">
-
-<input type="hidden" name="from_name" value="VIDHI Interior">
+                        <input type="hidden" name="from_name" value="VIDHI Interior">
 
 
 
-<input type="text"
-name="name"
-placeholder="Your Name"
-required
-
-style="
+                        <input type="text" name="name" placeholder="Your Name" required style="
 width:100%;
 padding:16px;
 margin-bottom:20px;
@@ -520,12 +621,7 @@ font-size:16px;
 ">
 
 
-<input type="email"
-name="email"
-placeholder="Your Email"
-required
-
-style="
+                        <input type="email" name="email" placeholder="Your Email" required style="
 width:100%;
 padding:16px;
 margin-bottom:20px;
@@ -536,12 +632,7 @@ font-size:16px;
 
 
 
-<input type="tel"
-name="phone"
-placeholder="Phone Number"
-required
-
-style="
+                        <input type="tel" name="phone" placeholder="Phone Number" required style="
 width:100%;
 padding:16px;
 margin-bottom:20px;
@@ -552,9 +643,7 @@ font-size:16px;
 
 
 
-<select name="service"
-
-style="
+                        <select name="service" style="
 width:100%;
 padding:16px;
 margin-bottom:20px;
@@ -563,33 +652,27 @@ border-radius:12px;
 font-size:16px;
 ">
 
-<option value="Residential">
-Residential
-</option>
+                            <option value="Residential">
+                                Residential
+                            </option>
 
-<option value="Commercial">
-Commercial
-</option>
+                            <option value="Commercial">
+                                Commercial
+                            </option>
 
-<option value="Modular Kitchen">
-Modular Kitchen
-</option>
+                            <option value="Modular Kitchen">
+                                Modular Kitchen
+                            </option>
 
-<option value="Renovation">
-Renovation
-</option>
+                            <option value="Renovation">
+                                Renovation
+                            </option>
 
-</select>
+                        </select>
 
 
 
-<textarea
-name="message"
-placeholder="Tell us about your project"
-rows="5"
-required
-
-style="
+                        <textarea name="message" placeholder="Tell us about your project" rows="5" required style="
 width:100%;
 padding:16px;
 margin-bottom:20px;
@@ -601,49 +684,82 @@ font-size:16px;
 
 
 
-<!-- Success Redirect -->
-<input type="hidden"
-name="redirect"
-value="https://web3forms.com/success">
+                        <!-- Success Redirect -->
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
 
 
-<button type="submit"
-class="btn btn-primary"
+                        <button type="submit" class="btn btn-primary" style="width:100%;">
 
-style="width:100%;">
+                            Send Message
 
-Send Message
-
-</button>
+                        </button>
 
 
-</form>
+                    </form>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">VIDHI INTERIORS</div>
+                    <p style="color: #aaa; margin-top: 15px; line-height: 1.6;">Designing spaces that define lifestyle
+                        since 2013. Creating timeless elegance with premium materials.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; font-size: 18px;">Quick Links</h4>
+                    <div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;"><a href="#home"
+                            style="color: #aaa; text-decoration: none;">Home</a><a href="#about"
+                            style="color: #aaa; text-decoration: none;">About</a><a href="#services"
+                            style="color: #aaa; text-decoration: none;">Services</a><a href="#portfolio"
+                            style="color: #aaa; text-decoration: none;">Portfolio</a></div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; font-size: 18px;">Services</h4>
+                    <div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;"><a href="#"
+                            style="color: #aaa; text-decoration: none;">Residential Design</a><a href="#"
+                            style="color: #aaa; text-decoration: none;">Commercial Design</a><a href="#"
+                            style="color: #aaa; text-decoration: none;">Modular Kitchen</a><a href="#"
+                            style="color: #aaa; text-decoration: none;">Renovation</a></div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px; font-size: 18px;">Newsletter</h4>
+                    <p style="color: #aaa; margin-bottom: 20px;">Subscribe for design inspiration and exclusive offers
+                    </p>
+                    <form style="display: flex; gap: 10px; flex-wrap: wrap;"><input type="email"
+                            placeholder="Your email"
+                            style="flex: 1; padding: 14px; border-radius: 8px; border: none; min-width: 150px;"><button
+                            class="btn btn-gold" style="padding: 14px 24px;">Subscribe</button></form>
+                </div>
+            </div>
+            <div class="footer-bottom"
+                style="text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);">
 
-</section>
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div><div class="footer-logo">VIDHI INTERIORS</div><p style="color: #aaa; margin-top: 15px; line-height: 1.6;">Designing spaces that define lifestyle since 2013. Creating timeless elegance with premium materials.</p></div>
-            <div><h4 style="margin-bottom: 25px; font-size: 18px;">Quick Links</h4><div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;"><a href="#home" style="color: #aaa; text-decoration: none;">Home</a><a href="#about" style="color: #aaa; text-decoration: none;">About</a><a href="#services" style="color: #aaa; text-decoration: none;">Services</a><a href="#portfolio" style="color: #aaa; text-decoration: none;">Portfolio</a></div></div>
-            <div><h4 style="margin-bottom: 25px; font-size: 18px;">Services</h4><div class="footer-links" style="display: flex; flex-direction: column; gap: 12px;"><a href="#" style="color: #aaa; text-decoration: none;">Residential Design</a><a href="#" style="color: #aaa; text-decoration: none;">Commercial Design</a><a href="#" style="color: #aaa; text-decoration: none;">Modular Kitchen</a><a href="#" style="color: #aaa; text-decoration: none;">Renovation</a></div></div>
-            <div><h4 style="margin-bottom: 25px; font-size: 18px;">Newsletter</h4><p style="color: #aaa; margin-bottom: 20px;">Subscribe for design inspiration and exclusive offers</p><form style="display: flex; gap: 10px; flex-wrap: wrap;"><input type="email" placeholder="Your email" style="flex: 1; padding: 14px; border-radius: 8px; border: none; min-width: 150px;"><button class="btn btn-gold" style="padding: 14px 24px;">Subscribe</button></form></div>
-        </div>
-        <div class="footer-bottom" style="text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);"><p>© 2026 Vidhi Interiors. All rights reserved. Crafted with <i class="fas fa-heart" style="color: var(--gold);"></i></p></div>
-    </div>
-</footer>
+                <p style="margin-bottom: 8px;">
+                    © 2026 Vidhi Interiors. All rights reserved.
+                </p>
 
-<!-- Consultation Modal -->
-<div id="consultationModal"
+                <p style="font-size: 14px; color: #aaa;">
+                    Crafted with <i class="fas fa-heart" style="color: var(--gold);"></i> by
+                    <a href="https://nexvoraweb.com" target="_blank" rel="noopener noreferrer"
+                        style="color: #fff; text-decoration: none;">
+                        NexvoraWeb
+                    </a>
+                </p>
 
-style="
+            </div>
+    </footer>
+
+    <!-- Consultation Modal -->
+    <div id="consultationModal" style="
 display:none;
 position:fixed;
 top:0;
@@ -657,7 +773,7 @@ justify-content:center;
 align-items:center;
 ">
 
-<div style="
+        <div style="
 background:white;
 max-width:500px;
 width:90%;
@@ -667,9 +783,7 @@ position:relative;
 animation:fadeUp 0.3s ease;
 ">
 
-<button onclick="closeConsultation()"
-
-style="
+            <button onclick="closeConsultation()" style="
 position:absolute;
 top:20px;
 right:20px;
@@ -679,48 +793,37 @@ font-size:28px;
 cursor:pointer;
 ">
 
-✕
+                ✕
 
-</button>
+            </button>
 
 
-<h2 style="
+            <h2 style="
 margin-bottom:25px;
 font-size:28px;
 ">
 
-Book Free Consultation
+                Book Free Consultation
 
-</h2>
-
-
-
-<form action="https://api.web3forms.com/submit" method="POST">
-
-
-<!-- Web3Forms Key -->
-<input type="hidden"
-name="access_key"
-value="2fb1477a-c40e-4d88-beb4-6fd00b5eb44e">
-
-
-<!-- Optional Fields -->
-<input type="hidden"
-name="subject"
-value="VIDHI Free Consultation Booking">
-
-<input type="hidden"
-name="from_name"
-value="VIDHI Interior Consultation">
+            </h2>
 
 
 
-<input type="text"
-name="name"
-placeholder="Full Name"
-required
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-style="
+
+                <!-- Web3Forms Key -->
+                <input type="hidden" name="access_key" value="2fb1477a-c40e-4d88-beb4-6fd00b5eb44e">
+
+
+                <!-- Optional Fields -->
+                <input type="hidden" name="subject" value="VIDHI Free Consultation Booking">
+
+                <input type="hidden" name="from_name" value="VIDHI Interior Consultation">
+
+
+
+                <input type="text" name="name" placeholder="Full Name" required style="
 width:100%;
 padding:14px;
 margin-bottom:15px;
@@ -729,12 +832,7 @@ border-radius:12px;
 ">
 
 
-<input type="email"
-name="email"
-placeholder="Email"
-required
-
-style="
+                <input type="email" name="email" placeholder="Email" required style="
 width:100%;
 padding:14px;
 margin-bottom:15px;
@@ -743,12 +841,7 @@ border-radius:12px;
 ">
 
 
-<input type="tel"
-name="phone"
-placeholder="Phone"
-required
-
-style="
+                <input type="tel" name="phone" placeholder="Phone" required style="
 width:100%;
 padding:14px;
 margin-bottom:15px;
@@ -758,9 +851,7 @@ border-radius:12px;
 
 
 
-<select name="service"
-
-style="
+                <select name="service" style="
 width:100%;
 padding:14px;
 margin-bottom:15px;
@@ -768,27 +859,23 @@ border:1px solid #ddd;
 border-radius:12px;
 ">
 
-<option value="Residential">
-Residential
-</option>
+                    <option value="Residential">
+                        Residential
+                    </option>
 
-<option value="Commercial">
-Commercial
-</option>
+                    <option value="Commercial">
+                        Commercial
+                    </option>
 
-<option value="Renovation">
-Renovation
-</option>
+                    <option value="Renovation">
+                        Renovation
+                    </option>
 
-</select>
+                </select>
 
 
 
-<input type="date"
-name="preferred_date"
-placeholder="Preferred Date"
-
-style="
+                <input type="date" name="preferred_date" placeholder="Preferred Date" style="
 width:100%;
 padding:14px;
 margin-bottom:20px;
@@ -798,13 +885,7 @@ border-radius:12px;
 
 
 
-<textarea
-name="message"
-placeholder="Project Details"
-rows="4"
-required
-
-style="
+                <textarea name="message" placeholder="Project Details" rows="4" required style="
 width:100%;
 padding:14px;
 margin-bottom:20px;
@@ -815,44 +896,38 @@ border-radius:12px;
 
 
 
-<!-- Anti Spam -->
-<input type="checkbox"
-name="botcheck"
-style="display:none;">
+                <!-- Anti Spam -->
+                <input type="checkbox" name="botcheck" style="display:none;">
 
 
 
-<!-- Success Page -->
-<input type="hidden"
-name="redirect"
-value="https://web3forms.com/success">
+                <!-- Success Page -->
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
 
 
-<button type="submit"
-class="btn btn-primary"
+                <button type="submit" class="btn btn-primary" style="width:100%;">
 
-style="width:100%;">
+                    Schedule Consultation
 
-Schedule Consultation
-
-</button>
+                </button>
 
 
-</form>
+            </form>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!-- Custom JS -->
-<script src="script.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
