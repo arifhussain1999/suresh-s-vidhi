@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://vidhinterio.in/sitemap.xml
