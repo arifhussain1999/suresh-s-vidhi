@@ -46,6 +46,7 @@ const portfolioItems = [
     }
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => { const loader = document.getElementById('loader'); if (loader) loader.classList.add('hide'); }, 1200);
+<<<<<<< HEAD
         renderPortfolio();
         if (typeof Swiper !== 'undefined') { new Swiper('#testimonialsSlider', { loop: true, autoplay: { delay: 5000, disableOnInteraction: false }, pagination: { el: '.swiper-pagination', clickable: true }, slidesPerView: 1, breakpoints: { 768: { slidesPerView: 2, spaceBetween: 30 }, 1024: { slidesPerView: 2, spaceBetween: 40 } } }); }
         if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true, offset: 100 });
@@ -60,6 +61,81 @@ const portfolioItems = [
         filterBtns.forEach(btn => { btn.addEventListener('click', () => { filterBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active'); const filter = btn.getAttribute('data-filter'); renderPortfolio(filter); const portfolioSection = document.getElementById('portfolio'); if (portfolioSection) portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
         const cards = document.querySelectorAll('.service-card, .feature-card, .material-item');
         cards.forEach(card => { card.addEventListener('mousemove', (e) => { const rect = card.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top; const centerX = rect.width / 2; const centerY = rect.height / 2; const rotateX = (y - centerY) / 20; const rotateY = (centerX - x) / 20; card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`; }); card.addEventListener('mouseleave', () => { card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)'; }); });
+=======
+        
+        // Portfolio initialization
+        const grid = document.getElementById('portfolioGrid');
+        if (grid) renderPortfolio();
+
+        // Swiper initialization
+        const testimonialsSlider = document.getElementById('testimonialsSlider');
+        if (typeof Swiper !== 'undefined' && testimonialsSlider) { 
+            new Swiper('#testimonialsSlider', { 
+                loop: true, 
+                autoplay: { delay: 5000, disableOnInteraction: false }, 
+                pagination: { el: '.swiper-pagination', clickable: true }, 
+                slidesPerView: 1, 
+                breakpoints: { 768: { slidesPerView: 2, spaceBetween: 30 }, 1024: { slidesPerView: 2, spaceBetween: 40 } } 
+            }); 
+        }
+
+        if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true, offset: 100 });
+        
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); }); }, { threshold: 0.1 });
+        reveals.forEach(reveal => observer.observe(reveal));
+        
+        window.addEventListener('scroll', () => { 
+            const navbar = document.getElementById('navbar'); 
+            if (navbar) { 
+                if (window.scrollY > 50) navbar.classList.add('scrolled'); 
+                else navbar.classList.remove('scrolled'); 
+            } 
+            
+            const progressBar = document.getElementById('progressBar');
+            if (progressBar) {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop; 
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
+                const scrolled = (winScroll / height) * 100; 
+                progressBar.style.width = scrolled + '%'; 
+            }
+        });
+
+        const counters = document.querySelectorAll('.trust-number');
+        if (counters.length > 0) {
+            const counterObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const counter = entry.target; const target = parseInt(counter.getAttribute('data-count')); let current = 0; const increment = target / 60; const updateCounter = () => { if (current < target) { current += increment; counter.textContent = Math.floor(current) + '+'; setTimeout(updateCounter, 20); } else { counter.textContent = target + '+'; } }; updateCounter(); counterObserver.unobserve(counter); } }); }, { threshold: 0.5 });
+            counters.forEach(counter => counterObserver.observe(counter));
+        }
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => { 
+            btn.addEventListener('click', () => { 
+                filterBtns.forEach(b => b.classList.remove('active')); 
+                btn.classList.add('active'); 
+                const filter = btn.getAttribute('data-filter'); 
+                renderPortfolio(filter); 
+                const portfolioSection = document.getElementById('portfolio'); 
+                if (portfolioSection) portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+            }); 
+        });
+
+        const cards = document.querySelectorAll('.service-card, .feature-card, .material-item');
+        cards.forEach(card => { 
+            card.addEventListener('mousemove', (e) => { 
+                const rect = card.getBoundingClientRect(); 
+                const x = e.clientX - rect.left; 
+                const y = e.clientY - rect.top; 
+                const centerX = rect.width / 2; 
+                const centerY = rect.height / 2; 
+                const rotateX = (y - centerY) / 20; 
+                const rotateY = (centerX - x) / 20; 
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`; 
+            }); 
+            card.addEventListener('mouseleave', () => { 
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)'; 
+            }); 
+        });
+>>>>>>> 9002a80b650701d2371c3b4457f40f9910663a3f
     });
     function openMobileMenu() { const mobileMenu = document.getElementById('mobileMenu'); const menuOverlay = document.getElementById('menuOverlay'); if (mobileMenu) mobileMenu.classList.add('active'); if (menuOverlay) menuOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
     function closeMobileMenu() { const mobileMenu = document.getElementById('mobileMenu'); const menuOverlay = document.getElementById('menuOverlay'); if (mobileMenu) mobileMenu.classList.remove('active'); if (menuOverlay) menuOverlay.classList.remove('active'); document.body.style.overflow = ''; }
