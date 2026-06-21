@@ -2158,76 +2158,61 @@
       }
 
       .services-grid {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+        background: transparent !important;
       }
 
       .service-card {
-        display: grid !important;
-        grid-template-columns: 70px 1fr !important;
-        grid-template-areas:
-          "icon name"
-          "icon desc"
-          "icon arrow" !important;
-        column-gap: 1.5rem !important;
-        row-gap: 0.5rem !important;
-        padding: 2.5rem 2rem !important;
-        border-bottom: 1px solid var(--bg-beige) !important;
-        border-right: none !important;
-        align-items: start !important;
-        text-align: left !important;
-        background: #fff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 1.5rem 1rem !important;
+        aspect-ratio: 1 / 1 !important;
+        border: 1px solid var(--glass-border) !important;
+        background: var(--bg-cream) !important;
+        position: relative !important;
       }
 
       .service-icon {
-        grid-area: icon;
-        margin: 0 !important;
-        width: 60px !important;
-        height: 60px !important;
+        margin: 0 0 1rem 0 !important;
+        width: 50px !important;
+        height: 50px !important;
       }
 
       .service-name {
-        grid-area: name;
-        margin: 0 !important;
-        font-size: 1.2rem !important;
+        margin: 0 0 0.6rem 0 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
       }
 
       .service-desc {
-        grid-area: desc;
-        margin: 0 !important;
-        font-size: 0.85rem !important;
-        line-height: 1.7 !important;
+        display: none !important;
       }
 
       .service-arrow {
-        grid-area: arrow;
-        margin-top: 1rem !important;
+        margin-top: auto !important;
+        font-size: 0.6rem !important;
       }
 
       .service-num {
         position: absolute !important;
-        top: 1rem !important;
-        right: 2rem !important;
-        font-size: 2.5rem !important;
+        top: 0.5rem !important;
+        right: 0.8rem !important;
+        font-size: 1.8rem !important;
         margin: 0 !important;
-        opacity: 0.5 !important;
+        opacity: 0.08 !important;
       }
 
       .services-grid h3 {
         display: none;
-      }
-
-      /* Hide the old redundant h3 if it exists in grid */
-
-      .services-grid h3 {
-        font-size: 1rem !important;
       }
 
       .services-grid p {
         display: none;
       }
-
-      /* Hide descriptions on mobile grid for space */
       .services-grid div[style*="padding:2rem"] {
         padding: 1rem !important;
       }
@@ -2250,7 +2235,12 @@
       }
 
       .footer-main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
       }
 
       .footer-bottom {
@@ -2279,62 +2269,34 @@
       }
 
       .portfolio-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 280px;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 180px;
+        gap: 8px;
       }
 
       .services-grid {
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-      }
-
-      .service-desc {
-        display: none !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
       }
 
       .service-card {
-        display: grid !important;
-        grid-template-columns: 50px 1fr !important;
-        grid-template-areas:
-          "icon name"
-          "icon arrow" !important;
-        column-gap: 0.8rem !important;
-        row-gap: 0.1rem !important;
         padding: 1.2rem 0.8rem !important;
-        border-bottom: 1px solid var(--bg-beige) !important;
-        border-right: none !important;
-        align-items: center !important;
-        text-align: left !important;
-        background: #fff !important;
+        aspect-ratio: 1 / 1 !important;
       }
 
       .service-icon {
-        grid-area: icon;
-        margin: 0 !important;
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 1rem !important;
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 0.9rem !important;
+        margin-bottom: 0.8rem !important;
       }
 
       .service-name {
-        grid-area: name;
-        margin: 0 !important;
-        font-size: 0.92rem !important;
+        font-size: 0.78rem !important;
       }
 
       .service-arrow {
-        grid-area: arrow;
-        margin-top: 0 !important;
-        font-size: 0.55rem !important;
-      }
-
-      .service-num {
-        position: absolute !important;
-        top: 0.5rem !important;
-        right: 0.8rem !important;
-        font-size: 1.8rem !important;
-        margin: 0 !important;
-        opacity: 0.05 !important;
+        font-size: 0.5rem !important;
       }
 
       .hero-btns {
@@ -2893,101 +2855,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" style="padding:7rem 5%;">
-      <div class="text-center reveal">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Start Your Design <em>Journey</em></h2>
-        <p class="section-sub">Tell us about your project and we'll get back within 24 hours.</p>
-      </div>
-      <div class="contact-grid reveal">
-        <div class="contact-info">
-          <a href="https://maps.app.goo.gl/V3acpTaHRtUXacK7" target="_blank" class="contact-item"
-            style="text-decoration:none;">
-            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <div class="contact-item-label">Our Studio</div>
-              <div class="contact-item-val">Bankura, West Bengal</div>
-            </div>
-          </a>
-          <a href="tel:+917699089182" class="contact-item" style="text-decoration:none;">
-            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <div class="contact-item-label">Phone / WhatsApp</div>
-              <div class="contact-item-val">+91 76990 89182</div>
-            </div>
-          </a>
-          <a href="mailto:vidhidoorandfurniture@gmail.com" class="contact-item" style="text-decoration:none;">
-            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <div class="contact-item-label">Email</div>
-              <div class="contact-item-val">vidhidoorandfurniture@gmail.com</div>
-            </div>
-          </a>
-          <a href="#" class="contact-item" style="text-decoration:none;"
-            target="_blank">
-            <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
-            <div>
-              <div class="contact-item-label">Website</div>
-              <div class="contact-item-val">www.vidhiinteriors.in</div>
-            </div>
-          </a>
-          <div class="contact-item" style="border-bottom:none;">
-            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
-            <div>
-              <div class="contact-item-label">Working Hours</div>
-              <div class="contact-item-val">Mon – Sat: 10AM – 7PM</div>
-            </div>
-          </div>
-          <div style="margin-top:2rem;">
-            <a href="https://wa.me/917699089182" target="_blank" class="btn-gold" style="margin-right:1rem;">
-              <i class="fab fa-whatsapp"></i> WhatsApp Us
-            </a>
-          </div>
-        </div>
-        <div>
-          <form class="consult-form" onsubmit="submitForm(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-control" placeholder="Your name" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Phone Number *</label>
-                <input type="tel" class="form-control" placeholder="+91 00000 00000" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" placeholder="your@email.com" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Service Required</label>
-              <select class="form-control form-select">
-                <option value="">Select a service</option>
-                <option>2D / 3D Design Layout</option>
-                <option>Modular Kitchen</option>
-                <option>Custom Furniture</option>
-                <option>False Ceiling Design</option>
-                <option>Painting Services</option>
-                <option>Full Home Interior</option>
-                <option>Office Interior</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Your Message</label>
-              <textarea class="form-control" placeholder="Tell us about your project, budget, timeline..."></textarea>
-            </div>
-            <div class="form-success" id="formSuccess">
-              ✓ Thank you! We'll contact you within 24 hours.
-            </div>
-            <button type="submit" class="btn-submit">
-              Send Message <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+
 
     <!-- FOOTER -->
     <footer>
