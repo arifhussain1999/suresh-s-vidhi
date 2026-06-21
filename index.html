@@ -1213,14 +1213,32 @@
       background: var(--bg-beige);
     }
 
-    .testimonials-wrap {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+    .testimonials-container {
+      position: relative;
+      width: 100%;
       margin-top: 4rem;
     }
 
+    .testimonials-wrap {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 1rem 0.2rem;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonials-wrap::-webkit-scrollbar {
+      display: none;
+    }
+
     .testi-card {
+      flex: 0 0 calc(33.333% - 1.33rem);
+      min-width: 320px;
+      scroll-snap-align: start;
       background: var(--bg-cream);
       padding: 2.5rem;
       border: 1px solid var(--bg-beige);
@@ -1232,6 +1250,52 @@
     .testi-card:hover {
       border-color: var(--gold);
       transform: translateY(-4px);
+    }
+
+    .testimonials-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .testi-control-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .testi-control-btn:hover {
+      background: var(--gold-gradient);
+      color: #ffffff;
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(200, 169, 106, 0.3);
+    }
+
+    @media(max-width: 1024px) {
+      .testi-card {
+        flex: 0 0 calc(50% - 1rem);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .testi-card {
+        flex: 0 0 90%;
+        min-width: 270px;
+      }
+      .testimonials-wrap {
+        gap: 1rem;
+      }
     }
 
     .testi-quote {
@@ -2750,50 +2814,62 @@
         <h2 class="section-title">What Our <em>Clients Say</em></h2>
         <p class="section-sub">Their words are our greatest achievement.</p>
       </div>
-      <div class="testimonials-wrap reveal">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-quote">"</div>
-          <p class="testi-text">VIDHI INTERIORS completely transformed our apartment. The 3D visualization helped
-            us see
-            exactly what we were getting, and the final result exceeded all our expectations. Truly world-class work!
-          </p>
-          <div class="testi-author">
-            <div class="testi-avatar">A</div>
-            <div>
-              <div class="testi-name">Arjun Sharma</div>
-              <div class="testi-role">Homeowner, Kolkata</div>
+      <div class="testimonials-container reveal">
+        <div class="testimonials-wrap" id="testimonialsWrap">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <p class="testi-text">VIDHI INTERIORS completely transformed our apartment. The 3D visualization helped
+              us see
+              exactly what we were getting, and the final result exceeded all our expectations. Truly world-class work!
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">A</div>
+              <div>
+                <div class="testi-name">Arjun Sharma</div>
+                <div class="testi-role">Homeowner, Kolkata</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <p class="testi-text">The modular kitchen they designed is nothing short of breathtaking. Every drawer, every
+              cabinet — perfectly engineered. The team was professional, timely, and genuinely passionate about their
+              craft.</p>
+            <div class="testi-author">
+              <div class="testi-avatar">P</div>
+              <div>
+                <div class="testi-name">Priya Dutta</div>
+                <div class="testi-role">Apartment Owner, Durgapur</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <div class="testi-quote">"</div>
+            <p class="testi-text">Our office now feels like a place where creativity flows naturally. VIDHI INTERIORS
+              understood
+              our brand's identity and embedded it seamlessly into the space. Outstanding work from an outstanding team.
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">R</div>
+              <div>
+                <div class="testi-name">Rahul Mehta</div>
+                <div class="testi-role">Business Owner, Asansol</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-quote">"</div>
-          <p class="testi-text">The modular kitchen they designed is nothing short of breathtaking. Every drawer, every
-            cabinet — perfectly engineered. The team was professional, timely, and genuinely passionate about their
-            craft.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">P</div>
-            <div>
-              <div class="testi-name">Priya Dutta</div>
-              <div class="testi-role">Apartment Owner, Durgapur</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-quote">"</div>
-          <p class="testi-text">Our office now feels like a place where creativity flows naturally. VIDHI INTERIORS
-            understood
-            our brand's identity and embedded it seamlessly into the space. Outstanding work from an outstanding team.
-          </p>
-          <div class="testi-author">
-            <div class="testi-avatar">R</div>
-            <div>
-              <div class="testi-name">Rahul Mehta</div>
-              <div class="testi-role">Business Owner, Asansol</div>
-            </div>
-          </div>
+        
+        <!-- Testimonials Navigation Controls -->
+        <div class="testimonials-controls">
+          <button class="testi-control-btn" onclick="scrollTestimonials(-1)" aria-label="Previous Testimonials">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="testi-control-btn" onclick="scrollTestimonials(1)" aria-label="Next Testimonials">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
       </div>
     </section>
@@ -3659,6 +3735,22 @@
           item.style.display = 'none';
         }
       });
+    }
+
+    // ─── TESTIMONIALS SLIDER ───
+    function scrollTestimonials(direction) {
+      const wrap = document.getElementById('testimonialsWrap');
+      if (wrap) {
+        const card = wrap.querySelector('.testi-card');
+        if (card) {
+          const cardWidth = card.offsetWidth;
+          const gap = parseInt(window.getComputedStyle(wrap).gap) || 0;
+          wrap.scrollBy({
+            left: direction * (cardWidth + gap),
+            behavior: 'smooth'
+          });
+        }
+      }
     }
   </script>
 </body>
